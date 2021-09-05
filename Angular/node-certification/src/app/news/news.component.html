@@ -1,0 +1,21 @@
+<div class="container">
+    <br> 
+    <h1 class="text-center"> See all of our sports articles! </h1>
+    <div class="card mb-3 border-0" *ngFor="let newsItem of newsList">
+      <div class="row g-0">
+          <div class="col-md-2 border">
+              <img class="img-fluid"
+                  [src]="newsItem.imgUrl" alt="News Pic">
+          </div>
+          <div class="col-md-9 border">
+              <div class="card-body">
+                  <h5 class="card-title font-weight-bold">{{newsItem.title}}
+                    <a [href]="newsItem.url" class="btn btn-primary float-right" target="_blank" rel="noopener noreferrer">See Article</a>
+                  </h5>
+                  <p class="card-text">{{newsItem.description}}</p>
+              </div>
+          </div>
+          <div class="col-md-1">
+        </div>
+      </div>
+  </div>
